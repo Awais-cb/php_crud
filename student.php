@@ -15,19 +15,19 @@
 
 			<tr>
 				<td align="right"> Student Name </td>
-				<td><input type="text" name="stname"/></td>
+				<td><input type="text" name="stname" placeholder=" Name" /></td>
 			</tr>
 			<tr>
 				<td align="right"> School Name </td>
-				<td><input type="text" name="scname"/></td>
+				<td><input type="text" name="scname" placeholder=" School name" /></td>
 			</tr>
 			<tr>
 				<td align="right"> Roll no </td>
-				<td><input type="text" name="rollno"/></td>
+				<td><input type="text" name="rollno" placeholder=" Roll number" /></td>
 			</tr>
 			<tr>
 				<td align="right"> Result </td>
-				<td><input type="text" name="result"/></td>
+				<td><input type="text" name="result" placeholder=" Result" /></td>
 			</tr>
 			<tr>
 
@@ -55,7 +55,7 @@
 	if(isset($_GET["search"])){
 		$search=$_GET["dinput"];
 		$que="select * from students where roll_no='$search' or st_name='$search'";
-		
+
 		$run=mysql_query($que);
 		while($row=mysql_fetch_array($run)){
 			$student_id=$row[0];
@@ -111,7 +111,7 @@
 					<td> <?php echo $sname; ?> </td>
 					<td> <?php echo $roll; ?> </td>
 					<td> <?php echo $res; ?> </td>
-					
+
 					<td><a href="update.php?edit=<?php echo $srno?>"> Edit </a></td>
 					<td><a href="delete.php?del=<?php echo $srno ?>"> Delete </a></td>
 				</tr>
@@ -143,10 +143,10 @@
 			$scn=$_POST["scname"];
 			$roll=$_POST["rollno"];
 			$rslt=$_POST["result"];
-			
+
 			$query="insert into students (st_name,sc_name,roll_no,result) VALUES ('$stn','$scn','$roll','$rslt')";
 			if(mysql_query($query)){
-				
+
 				echo "<script>window.open('student.php?inserted=Record Inserted','_self') </script>";
 										//echo"<h4 align=\"center\" >Data inserted</h4><br/>";
 										//header('Refresh: 0');
