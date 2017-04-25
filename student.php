@@ -1,6 +1,7 @@
 <html>
 <head>
 	<title> Student data </title>
+	<link rel="icon" href="demo_icon.gif" type="image/gif" sizes="16x16">
 </head>
 <body>
 	<?php
@@ -15,19 +16,19 @@
 
 			<tr>
 				<td align="right"> Student Name </td>
-				<td><input type="text" name="stname" placeholder=" Name" /></td>
+				<td><input type="text" name="stname" placeholder=" Name" maxlength="20" autofocus/></td>
 			</tr>
 			<tr>
 				<td align="right"> School Name </td>
-				<td><input type="text" name="scname" placeholder=" School name" /></td>
+				<td><input type="text" name="scname" placeholder=" School name" maxlength="20" /></td>
 			</tr>
 			<tr>
 				<td align="right"> Roll no </td>
-				<td><input type="text" name="rollno" placeholder=" Roll number" /></td>
+				<td><input type="text" name="rollno" placeholder=" Roll number" maxlength="5"/></td>
 			</tr>
 			<tr>
 				<td align="right"> Result </td>
-				<td><input type="text" name="result" placeholder=" Result" /></td>
+				<td><input type="text" name="result" placeholder=" Result" maxlength="10"/></td>
 			</tr>
 			<tr>
 
